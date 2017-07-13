@@ -1,5 +1,5 @@
 //
-//  UIStoryBoard.swift
+//  UIStoryboard.swift
 //  TemplateSwift3
 //
 //  Created by Hipolito Arias on 13/07/2017.
