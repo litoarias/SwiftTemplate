@@ -1,0 +1,7 @@
+
+GENERIC_ERROR_MESSAGE = "No se pudo realizar esta operación 😬!";
+TITLE_ERROR = "Error";
+TITLE_WAIT = "Espere";
+TITLE_CONFIRM = "Confirmar";
+CANCEL = "Cancelar";
+NO_INTERNET_MESSAGE = "Por favor, compruebe su conexión a Internet y vuelva a intentarlo.";

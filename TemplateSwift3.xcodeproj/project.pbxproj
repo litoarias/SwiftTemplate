@@ -10,7 +10,6 @@
 		0AA207BA1F175BC100315FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA207B91F175BC100315FDC /* AppDelegate.swift */; };
 		0AA207C11F175BC200315FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA207C01F175BC200315FDC /* Assets.xcassets */; };
 		0AA207C41F175BC200315FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA207C21F175BC200315FDC /* LaunchScreen.storyboard */; };
-		0AA207EC1F175D5400315FDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA207EB1F175D5400315FDC /* Localizable.strings */; };
 		0AA207F91F17667F00315FDC /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA207F81F17667F00315FDC /* ValidationHelper.swift */; };
 		0AA207FB1F17677900315FDC /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA207FA1F17677900315FDC /* UIAlertController.swift */; };
 		0AA207FD1F17681600315FDC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA207FC1F17681600315FDC /* UIViewController.swift */; };
@@ -34,6 +33,9 @@
 		0AA208341F1773F000315FDC /* SectionHeaderLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208321F1773F000315FDC /* SectionHeaderLabelCell.swift */; };
 		0AA208351F1773F000315FDC /* SectionHeaderLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA208331F1773F000315FDC /* SectionHeaderLabelCell.xib */; };
 		0AA208371F17780800315FDC /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208361F17780800315FDC /* SessionHelper.swift */; };
+		0AA208421F177F1A00315FDC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208411F177F1A00315FDC /* BaseViewController.swift */; };
+		0AA208451F177F6200315FDC /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208441F177F6200315FDC /* BaseContract.swift */; };
+		0AA208461F17804000315FDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA208481F17804000315FDC /* Localizable.strings */; };
 		D33E7321ABF2DDF33270A816 /* Pods_TemplateSwift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EF89D0A2F9E9F04C2B217A /* Pods_TemplateSwift3.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +64,6 @@
 		0AA207C51F175BC200315FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AA207CA1F175BC200315FDC /* TemplateSwift3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateSwift3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA207D51F175BC200315FDC /* TemplateSwift3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateSwift3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AA207EB1F175D5400315FDC /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		0AA207F81F17667F00315FDC /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		0AA207FA1F17677900315FDC /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		0AA207FC1F17681600315FDC /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +87,10 @@
 		0AA208321F1773F000315FDC /* SectionHeaderLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderLabelCell.swift; sourceTree = "<group>"; };
 		0AA208331F1773F000315FDC /* SectionHeaderLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderLabelCell.xib; sourceTree = "<group>"; };
 		0AA208361F17780800315FDC /* SessionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
+		0AA208411F177F1A00315FDC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0AA208441F177F6200315FDC /* BaseContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContract.swift; sourceTree = "<group>"; };
+		0AA208471F17804000315FDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0AA208491F17804200315FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4A66F907AA9414625CAA4F01 /* Pods-TemplateSwift3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateSwift3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateSwift3/Pods-TemplateSwift3.debug.xcconfig"; sourceTree = "<group>"; };
 		57023713936D36E9E0F76B12 /* Pods-TemplateSwift3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateSwift3.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateSwift3/Pods-TemplateSwift3.release.xcconfig"; sourceTree = "<group>"; };
 		A4EF89D0A2F9E9F04C2B217A /* Pods_TemplateSwift3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateSwift3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,25 +166,16 @@
 		0AA207E71F175BFA00315FDC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0AA207E81F175C4800315FDC /* Base */,
+				0AA208431F177F4C00315FDC /* Contract */,
+				0AA208401F177F0800315FDC /* Base */,
 			);
-			name = Modules;
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		0AA207E81F175C4800315FDC /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Base;
-			path = Base;
 			sourceTree = "<group>";
 		};
 		0AA207ED1F175D7800315FDC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -197,7 +193,6 @@
 				0AA208281F17735200315FDC /* Structs */,
 				0AA2080D1F176F4800315FDC /* UIViews */,
 			);
-			name = Utils;
 			path = Utils;
 			sourceTree = "<group>";
 		};
@@ -208,7 +203,6 @@
 				0AA207F21F175E4D00315FDC /* Images */,
 				0AA207F31F175E5800315FDC /* Strings */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -218,7 +212,6 @@
 				0AA207B91F175BC100315FDC /* AppDelegate.swift */,
 				0AA207C21F175BC200315FDC /* LaunchScreen.storyboard */,
 			);
-			name = Application;
 			path = Application;
 			sourceTree = "<group>";
 		};
@@ -226,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Fonts;
 			path = Fonts;
 			sourceTree = "<group>";
 		};
@@ -235,16 +227,14 @@
 			children = (
 				0AA207C01F175BC200315FDC /* Assets.xcassets */,
 			);
-			name = Images;
 			path = Images;
 			sourceTree = "<group>";
 		};
 		0AA207F31F175E5800315FDC /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				0AA207EB1F175D5400315FDC /* Localizable.strings */,
+				0AA208481F17804000315FDC /* Localizable.strings */,
 			);
-			name = Strings;
 			path = Strings;
 			sourceTree = "<group>";
 		};
@@ -254,7 +244,6 @@
 				0AA208071F176E7200315FDC /* Api */,
 				0AA208081F176E7D00315FDC /* Local */,
 			);
-			name = DataManagers;
 			path = DataManagers;
 			sourceTree = "<group>";
 		};
@@ -262,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = NetworkManager;
 			path = NetworkManager;
 			sourceTree = "<group>";
 		};
@@ -283,7 +271,6 @@
 				0AA2081E1F17721F00315FDC /* UIView.swift */,
 				0AA207FC1F17681600315FDC /* UIViewController.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -293,7 +280,6 @@
 				0AA208361F17780800315FDC /* SessionHelper.swift */,
 				0AA207F81F17667F00315FDC /* ValidationHelper.swift */,
 			);
-			name = Helpers;
 			path = Helpers;
 			sourceTree = "<group>";
 		};
@@ -303,7 +289,6 @@
 				0AA2080B1F176EE400315FDC /* NibLoadableView.swift */,
 				0AA207FF1F17685400315FDC /* ReusableView.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -311,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Api;
 			path = Api;
 			sourceTree = "<group>";
 		};
@@ -319,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Local;
 			path = Local;
 			sourceTree = "<group>";
 		};
@@ -328,7 +311,6 @@
 			children = (
 				0AA2080E1F176F5A00315FDC /* TableViewCells */,
 			);
-			name = UIViews;
 			path = UIViews;
 			sourceTree = "<group>";
 		};
@@ -337,7 +319,6 @@
 			children = (
 				0AA208311F1773B100315FDC /* SectionHeaderLabelCell */,
 			);
-			name = TableViewCells;
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
@@ -346,7 +327,6 @@
 			children = (
 				0AA208101F17702800315FDC /* Constants.swift */,
 			);
-			name = Constants;
 			path = Constants;
 			sourceTree = "<group>";
 		};
@@ -357,7 +337,6 @@
 				0AA208231F1772EF00315FDC /* RoundedTextField.swift */,
 				0AA208251F17730900315FDC /* SimpleCircle.swift */,
 			);
-			name = IBDesignables;
 			path = IBDesignables;
 			sourceTree = "<group>";
 		};
@@ -365,7 +344,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Enums;
 			path = Enums;
 			sourceTree = "<group>";
 		};
@@ -373,7 +351,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Structs;
 			path = Structs;
 			sourceTree = "<group>";
 		};
@@ -383,8 +360,23 @@
 				0AA208321F1773F000315FDC /* SectionHeaderLabelCell.swift */,
 				0AA208331F1773F000315FDC /* SectionHeaderLabelCell.xib */,
 			);
-			name = SectionHeaderLabelCell;
 			path = SectionHeaderLabelCell;
+			sourceTree = "<group>";
+		};
+		0AA208401F177F0800315FDC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0AA208411F177F1A00315FDC /* BaseViewController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		0AA208431F177F4C00315FDC /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				0AA208441F177F6200315FDC /* BaseContract.swift */,
+			);
+			name = Contract;
 			sourceTree = "<group>";
 		};
 		6D722C180F94A5B62C25A389 /* Pods */ = {
@@ -511,7 +503,7 @@
 			files = (
 				0AA207C41F175BC200315FDC /* LaunchScreen.storyboard in Resources */,
 				0AA208351F1773F000315FDC /* SectionHeaderLabelCell.xib in Resources */,
-				0AA207EC1F175D5400315FDC /* Localizable.strings in Resources */,
+				0AA208461F17804000315FDC /* Localizable.strings in Resources */,
 				0AA207C11F175BC200315FDC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +582,8 @@
 				0AA208131F1770F800315FDC /* UIColor+Pallet.swift in Sources */,
 				0AA208241F1772EF00315FDC /* RoundedTextField.swift in Sources */,
 				0AA208171F17716B00315FDC /* UIImage+Icons.swift in Sources */,
+				0AA208421F177F1A00315FDC /* BaseViewController.swift in Sources */,
+				0AA208451F177F6200315FDC /* BaseContract.swift in Sources */,
 				0AA2081D1F17720900315FDC /* UITextField+Border.swift in Sources */,
 				0AA208111F17702800315FDC /* Constants.swift in Sources */,
 				0AA207F91F17667F00315FDC /* ValidationHelper.swift in Sources */,
@@ -648,6 +642,15 @@
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
+			sourceTree = "<group>";
+		};
+		0AA208481F17804000315FDC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AA208471F17804000315FDC /* en */,
+				0AA208491F17804200315FDC /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
