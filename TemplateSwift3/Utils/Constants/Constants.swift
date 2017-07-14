@@ -14,8 +14,10 @@ enum Constants {
     
     enum URL {
         static let baseURL = "http://hspay.herokuapp.com/v1/"
-        static let signUp = baseURL + ""
-        static let login = baseURL + "auth/"
+        static let login = ""
+        static let changePassword = ""
+        static let resetPassword = ""
+        static let registerDevice = ""
     }
     
     enum Storyboard {

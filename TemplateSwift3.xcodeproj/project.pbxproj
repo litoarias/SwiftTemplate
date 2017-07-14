@@ -44,6 +44,9 @@
 		0AA208371F17780800315FDC /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208361F17780800315FDC /* SessionHelper.swift */; };
 		0AA208421F177F1A00315FDC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208411F177F1A00315FDC /* BaseViewController.swift */; };
 		0AA208461F17804000315FDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA208481F17804000315FDC /* Localizable.strings */; };
+		0AB295791F18D81B00E936C9 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB295781F18D81B00E936C9 /* AuthRouter.swift */; };
+		0AB2957E1F18E5AA00E936C9 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB2957D1F18E5AA00E936C9 /* AuthProvider.swift */; };
+		0AC73D281F17D1E600D7C808 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC73D271F17D1E600D7C808 /* SessionManager.swift */; };
 		672D7A3E062EF9FAC55D0A75 /* Pods_TemplateSwift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A776ED2F2E3D769643CB5D5 /* Pods_TemplateSwift3.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +110,9 @@
 		0AA208411F177F1A00315FDC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0AA208471F17804000315FDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0AA208491F17804200315FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0AB295781F18D81B00E936C9 /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		0AB2957D1F18E5AA00E936C9 /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		0AC73D271F17D1E600D7C808 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		0CC20A59E30770E4343D78AC /* Pods-TemplateSwift3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateSwift3.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateSwift3/Pods-TemplateSwift3.release.xcconfig"; sourceTree = "<group>"; };
 		2A776ED2F2E3D769643CB5D5 /* Pods_TemplateSwift3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateSwift3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39BC79F87C39E15A73456E3 /* Pods-TemplateSwift3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateSwift3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateSwift3/Pods-TemplateSwift3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 		0AA207B81F175BC100315FDC /* TemplateSwift3 */ = {
 			isa = PBXGroup;
 			children = (
+				0AC73D261F17D19B00D7C808 /* Network */,
 				0AA207F01F175DB200315FDC /* Application */,
 				0AA207EF1F175DA100315FDC /* Assets */,
 				0AA207ED1F175D7800315FDC /* Entities */,
@@ -412,6 +419,40 @@
 			path = ../Contract;
 			sourceTree = "<group>";
 		};
+		0AB295761F18D7D900E936C9 /* SessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				0AC73D271F17D1E600D7C808 /* SessionManager.swift */,
+			);
+			name = SessionManager;
+			sourceTree = "<group>";
+		};
+		0AB295771F18D7E600E936C9 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				0AB295781F18D81B00E936C9 /* AuthRouter.swift */,
+			);
+			name = Routers;
+			sourceTree = "<group>";
+		};
+		0AB2957C1F18E52500E936C9 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				0AB2957D1F18E5AA00E936C9 /* AuthProvider.swift */,
+			);
+			name = Provider;
+			sourceTree = "<group>";
+		};
+		0AC73D261F17D19B00D7C808 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0AB2957C1F18E52500E936C9 /* Provider */,
+				0AB295771F18D7E600E936C9 /* Routers */,
+				0AB295761F18D7D900E936C9 /* SessionManager */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		71985D987BFA3002FF520B58 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,6 +666,7 @@
 				0AA208131F1770F800315FDC /* UIColor+Pallet.swift in Sources */,
 				0AA208241F1772EF00315FDC /* RoundedTextField.swift in Sources */,
 				0A9508F51F1792C100581CE8 /* SplashContract.swift in Sources */,
+				0AB295791F18D81B00E936C9 /* AuthRouter.swift in Sources */,
 				0AA208171F17716B00315FDC /* UIImage+Icons.swift in Sources */,
 				0AA208421F177F1A00315FDC /* BaseViewController.swift in Sources */,
 				0AA2081D1F17720900315FDC /* UITextField+Border.swift in Sources */,
@@ -650,7 +692,9 @@
 				0AA208041F176DF000315FDC /* Error.swift in Sources */,
 				0AA2081F1F17721F00315FDC /* UIView.swift in Sources */,
 				0AA207BA1F175BC100315FDC /* AppDelegate.swift in Sources */,
+				0AB2957E1F18E5AA00E936C9 /* AuthProvider.swift in Sources */,
 				0A9508F91F1792C100581CE8 /* SplashViewController.swift in Sources */,
+				0AC73D281F17D1E600D7C808 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
