@@ -45,7 +45,7 @@ class NetworkSessionManager: SessionManager {
                     
                     guard let data = response.data,
                             let json = String(data: data, encoding: String.Encoding.utf8) else {
-                            completion(nil, NSError(domain:"Encoding data error", code:1000, userInfo:nil))
+                            completion(nil, NSError.parseError())
                             return
                     }
                     completion(json, nil)
