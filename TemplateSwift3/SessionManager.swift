@@ -11,7 +11,7 @@ import Alamofire
 
 class NetworkSessionManager: SessionManager {
     
-    static let sharedInstance : NetworkSessionManager = {
+    static let shared : NetworkSessionManager = {
         let instance = NetworkSessionManager()
         return instance
     }()
@@ -42,11 +42,9 @@ class NetworkSessionManager: SessionManager {
                 switch response.result {
                     
                 case .success:
-                    
-                    guard let data = response.data,
-                            let json = String(data: data, encoding: String.Encoding.utf8) else {
-                            completion(nil, NSError.parseError())
-                            return
+                    guard let data = response.data, let json = String(data: data, encoding: String.Encoding.utf8) else {
+                        completion(nil, NSError.parseError())
+                        return
                     }
                     completion(json, nil)
                     

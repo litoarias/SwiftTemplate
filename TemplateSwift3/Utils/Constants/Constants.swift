@@ -13,11 +13,10 @@ import Localize_Swift
 enum Constants {
     
     enum URL {
-        static let baseURL = "http://hspay.herokuapp.com/v1/"
-        static let login = ""
-        static let changePassword = ""
-        static let resetPassword = ""
-        static let registerDevice = ""
+        static let baseURL = "https://jsonplaceholder.typicode.com/"
+        static let posts_verbGet = "posts"
+        static let posts_verbPost = "posts"
+        static let posts_verbGetWithParams = "posts"
     }
     
     enum Storyboard {

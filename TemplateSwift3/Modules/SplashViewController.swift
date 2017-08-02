@@ -6,7 +6,6 @@
 //  Copyright © 2017 Hipolito Arias. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class SplashViewController: BaseViewController, StoryboardLoadable {
@@ -19,6 +18,19 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*DemoProvider().getPosts(success: { (data) in
+            
+        }) { (error) in
+        
+        }*/
+        
+        let params = ["userId" : "1"]
+        DemoProvider().getPosts(params: params, success: { (data) in
+            
+        }) { (error) in
+            
+        }
     }
 }
 
