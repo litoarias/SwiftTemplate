@@ -1,7 +1,7 @@
 # SwiftTemplate :octocat:
 It's a basic template for start projects, using VIPER and Clean Architecture
 
-## Synopsis
+## Features
 - [x] VIPER ARCHIRTECTURE :heartbeat:
 - [x] VERY EASY ADD VIPER MODULES :metal:
 - [x] EASY TO USE :trollface:
