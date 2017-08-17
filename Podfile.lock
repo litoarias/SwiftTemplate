@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.4.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
   - KeychainAccess (3.0.2)
   - Localize-Swift (1.7.1)
   - MBProgressHUD (1.0.0)
@@ -15,11 +17,11 @@ PODS:
   - ObjectMapper (2.2.6)
   - Quick (1.1.0)
   - UIColor_Hex_Swift (3.0.2)
-  - Unbox (2.5.0)
   - URITemplate (2.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - AlamofireImage (~> 3.1)
   - KeychainAccess
   - Localize-Swift (~> 1.6)
   - MBProgressHUD (~> 1.0.0)
@@ -29,10 +31,10 @@ DEPENDENCIES:
   - ObjectMapper (~> 2.2)
   - Quick
   - UIColor_Hex_Swift (~> 3.0.1)
-  - Unbox
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
   Localize-Swift: 6cabc1087c0e910e77bfa87c2ed3f65c80c0b2df
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -42,9 +44,8 @@ SPEC CHECKSUMS:
   ObjectMapper: '042708195cc46c20871cbcbec0453826398273fd'
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
-  Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
   URITemplate: 720b8a56a281494d7c2d31ee33183986eaed2c67
 
-PODFILE CHECKSUM: 251967e057f7d525efcc89bcbf7aadfd8ce396d8
+PODFILE CHECKSUM: 17c723411c3200e77e1aa73194fb9f92e9a936b3
 
 COCOAPODS: 1.2.1

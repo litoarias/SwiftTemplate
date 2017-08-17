@@ -9,6 +9,5 @@
 import Alamofire
 
 protocol JsonParser {
-    func parseResponseServer(response: DataResponse<Any>,
-                             completion: @escaping (Result<Json>) -> Void)
+    func parseResponseServer(response: DataResponse<Any>, completion: @escaping (Result<Json>) -> Void)
 }

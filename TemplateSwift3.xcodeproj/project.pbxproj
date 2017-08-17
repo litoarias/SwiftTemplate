@@ -53,6 +53,7 @@
 		0AB6484F1F45B18C00FA8D4F /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6484E1F45B18C00FA8D4F /* JsonParser.swift */; };
 		0AB648511F45B3A300FA8D4F /* ResponseJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB648501F45B3A300FA8D4F /* ResponseJsonParser.swift */; };
 		0AB648591F45B83C00FA8D4F /* TemplateSwift3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB648581F45B83C00FA8D4F /* TemplateSwift3Tests.swift */; };
+		0AB648611F45BFA500FA8D4F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB648601F45BFA500FA8D4F /* UIImageView.swift */; };
 		0AC73D281F17D1E600D7C808 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC73D271F17D1E600D7C808 /* SessionManager.swift */; };
 		413D24021F322F0C00AA7A65 /* DemoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D24011F322F0C00AA7A65 /* DemoRouter.swift */; };
 		413D24051F32329D00AA7A65 /* PostDemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D24041F32329D00AA7A65 /* PostDemoModel.swift */; };
@@ -123,6 +124,7 @@
 		0AB648561F45B83C00FA8D4F /* TemplateSwift3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateSwift3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB648581F45B83C00FA8D4F /* TemplateSwift3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSwift3Tests.swift; sourceTree = "<group>"; };
 		0AB6485A1F45B83C00FA8D4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AB648601F45BFA500FA8D4F /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		0AC73D271F17D1E600D7C808 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		0AF3CB0C0B8C8549FD0A003E /* Pods_TemplateSwift3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateSwift3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D612730CC12FC3FEE9D131B /* Pods-TemplateSwift3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateSwift3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateSwift3Tests/Pods-TemplateSwift3Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				0AA207FA1F17677900315FDC /* UIAlertController.swift */,
 				0AA208121F1770F800315FDC /* UIColor+Pallet.swift */,
 				0AA208141F17714900315FDC /* UIFont+Utils.swift */,
+				0AB648601F45BFA500FA8D4F /* UIImageView.swift */,
 				0AA208161F17716B00315FDC /* UIImage+Icons.swift */,
 				0AA208091F176EC500315FDC /* UITableView.swift */,
 				0AA2081A1F1771DD00315FDC /* UITableViewCell.swift */,
@@ -725,6 +728,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA208021F17690100315FDC /* String.swift in Sources */,
+				0AB648611F45BFA500FA8D4F /* UIImageView.swift in Sources */,
 				0AA2081B1F1771DD00315FDC /* UITableViewCell.swift in Sources */,
 				0A9508F61F1792C100581CE8 /* SplashInteractor.swift in Sources */,
 				0AA208131F1770F800315FDC /* UIColor+Pallet.swift in Sources */,
@@ -997,6 +1001,7 @@
 				0AB6485F1F45B83C00FA8D4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

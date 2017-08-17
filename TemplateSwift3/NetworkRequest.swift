@@ -17,11 +17,9 @@ protocol NetworkRequest {
                  adapter: RequestAdapter?,
                  completion: @escaping (Result<Json>) -> Void) -> Void
     
-    func request(
-        _ url: URL,
-        method: HTTPMethod,
-        parameters: [String: Any]?,
-        headers: [String: String]?,
-        completion: @escaping (Result<Json>) -> Void)
-        -> Void
+    func request( _ url: URL,
+                  method: HTTPMethod,
+                  parameters: [String: Any]?,
+                  headers: [String: String]?,
+                  completion: @escaping (Result<Json>) -> Void) -> Void
 }
