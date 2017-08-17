@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A22F2061F45790000628E70 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A22F2051F45790000628E70 /* Result.swift */; };
+		0A22F2081F45795100628E70 /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A22F2071F45795100628E70 /* JsonObject.swift */; };
+		0A22F20A1F4579A400628E70 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A22F2091F4579A400628E70 /* NetworkRequest.swift */; };
+		0A22F20C1F4579EC00628E70 /* RealNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A22F20B1F4579EC00628E70 /* RealNetworkRequest.swift */; };
+		0A22F20E1F4580AB00628E70 /* DemoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A22F20D1F4580AB00628E70 /* DemoAdapter.swift */; };
 		0A3900D71F178CBE00C4594E /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3900D61F178CBE00C4594E /* RootRouter.swift */; };
 		0A3900FF1F178FD200C4594E /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3900FE1F178FD200C4594E /* BaseContract.swift */; };
 		0A39011F1F17918A00C4594E /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A39011E1F17918A00C4594E /* UIStoryboard.swift */; };
@@ -70,6 +75,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A22F2051F45790000628E70 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0A22F2071F45795100628E70 /* JsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
+		0A22F2091F4579A400628E70 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		0A22F20B1F4579EC00628E70 /* RealNetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealNetworkRequest.swift; sourceTree = "<group>"; };
+		0A22F20D1F4580AB00628E70 /* DemoAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAdapter.swift; sourceTree = "<group>"; };
 		0A3900D61F178CBE00C4594E /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		0A3900FE1F178FD200C4594E /* BaseContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseContract.swift; path = TemplateSwift3/Modules/BaseContract.swift; sourceTree = SOURCE_ROOT; };
 		0A39011E1F17918A00C4594E /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
@@ -148,6 +158,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A22F2041F4578DC00628E70 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0A22F2051F45790000628E70 /* Result.swift */,
+				0A22F2071F45795100628E70 /* JsonObject.swift */,
+				0A22F2091F4579A400628E70 /* NetworkRequest.swift */,
+				0A22F20B1F4579EC00628E70 /* RealNetworkRequest.swift */,
+				0AC73D271F17D1E600D7C808 /* SessionManager.swift */,
+				413D24011F322F0C00AA7A65 /* DemoRouter.swift */,
+				0A22F20D1F4580AB00628E70 /* DemoAdapter.swift */,
+			);
+			name = NetworkLayer;
+			sourceTree = "<group>";
+		};
 		0A3900D81F178DC600C4594E /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +216,7 @@
 		0AA207B81F175BC100315FDC /* TemplateSwift3 */ = {
 			isa = PBXGroup;
 			children = (
+				0A22F2041F4578DC00628E70 /* NetworkLayer */,
 				0AC73D261F17D19B00D7C808 /* Network */,
 				0AA207F01F175DB200315FDC /* Application */,
 				0AA207EF1F175DA100315FDC /* Assets */,
@@ -428,7 +453,6 @@
 		0AB295761F18D7D900E936C9 /* SessionManager */ = {
 			isa = PBXGroup;
 			children = (
-				0AC73D271F17D1E600D7C808 /* SessionManager.swift */,
 			);
 			name = SessionManager;
 			sourceTree = "<group>";
@@ -436,7 +460,6 @@
 		0AB295771F18D7E600E936C9 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
-				413D24011F322F0C00AA7A65 /* DemoRouter.swift */,
 			);
 			name = Routers;
 			sourceTree = "<group>";
@@ -634,7 +657,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		83C702E563BBB7D693DC63E4 /* [CP] Embed Pods Frameworks */ = {
@@ -686,10 +709,12 @@
 				0AA208111F17702800315FDC /* Constants.swift in Sources */,
 				413D24051F32329D00AA7A65 /* PostDemoModel.swift in Sources */,
 				0AA207F91F17667F00315FDC /* ValidationHelper.swift in Sources */,
+				0A22F2081F45795100628E70 /* JsonObject.swift in Sources */,
 				0A9508F71F1792C100581CE8 /* SplashPresenter.swift in Sources */,
 				413D24021F322F0C00AA7A65 /* DemoRouter.swift in Sources */,
 				0AA208001F17685400315FDC /* ReusableView.swift in Sources */,
 				0A9508F81F1792C100581CE8 /* SplashRouter.swift in Sources */,
+				0A22F20E1F4580AB00628E70 /* DemoAdapter.swift in Sources */,
 				0AA208061F176E1400315FDC /* NSNumber.swift in Sources */,
 				0AA208341F1773F000315FDC /* SectionHeaderLabelCell.swift in Sources */,
 				0AA208261F17730900315FDC /* SimpleCircle.swift in Sources */,
@@ -700,12 +725,15 @@
 				0AA208221F1772B700315FDC /* InverterButton.swift in Sources */,
 				0AA207FB1F17677900315FDC /* UIAlertController.swift in Sources */,
 				413D24071F32357200AA7A65 /* DemoProvider.swift in Sources */,
+				0A22F2061F45790000628E70 /* Result.swift in Sources */,
 				0AA2080A1F176EC500315FDC /* UITableView.swift in Sources */,
 				0AA208371F17780800315FDC /* SessionHelper.swift in Sources */,
 				0A3900FF1F178FD200C4594E /* BaseContract.swift in Sources */,
 				0AA2080C1F176EE400315FDC /* NibLoadableView.swift in Sources */,
 				0AA207FD1F17681600315FDC /* UIViewController.swift in Sources */,
+				0A22F20C1F4579EC00628E70 /* RealNetworkRequest.swift in Sources */,
 				0AA208041F176DF000315FDC /* Error.swift in Sources */,
+				0A22F20A1F4579A400628E70 /* NetworkRequest.swift in Sources */,
 				0AA2081F1F17721F00315FDC /* UIView.swift in Sources */,
 				0AA207BA1F175BC100315FDC /* AppDelegate.swift in Sources */,
 				0A9508F91F1792C100581CE8 /* SplashViewController.swift in Sources */,

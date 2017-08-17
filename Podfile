@@ -12,5 +12,6 @@ target 'TemplateSwift3' do
     pod 'UIColor_Hex_Swift', '~> 3.0.1'
     pod 'NextResponderTextField'
     pod 'Localize-Swift', '~> 1.6'
+    pod 'Unbox'
     
 end
