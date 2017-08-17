@@ -7,28 +7,44 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class SplashViewController: BaseViewController, StoryboardLoadable {
-
+    
     // MARK: Properties
-
+    
     var presenter: SplashPresentation?
-
+    var networkService: RealNetworkRequest = RealNetworkRequest()
+    
     // MARK: Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*DemoProvider().getPosts(success: { (data) in
-            
-        }) { (error) in
         
-        }*/
-        
-        let params = ["userId" : "1"]
-        DemoProvider().getPosts(params: params, success: { (data) in
+        networkService.request(router: DemoRouter.postsA()) { (result) in
             
-        }) { (error) in
+            switch result {
+                
+            case .success(.array (let response)):
+                if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: response){
+                    debugPrint("--> \(resp)")
+                }
+                
+            case .success(.object (let response)):
+                if let resp = Mapper<PostDemoModel>().map(JSON: response) {
+                    debugPrint("----> \(resp)")
+                }
+                
+            case .error(let error, let data):
+                debugPrint(error)
+                debugPrint(data)
+                
+                break
+                
+            }
+            
+            
             
         }
     }

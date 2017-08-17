@@ -20,6 +20,7 @@ class PostDemoModel : NSObject, NSCoding, Mappable{
 	class func newInstance(map: Map) -> Mappable?{
 		return PostDemoModel()
 	}
+    
 	required init?(map: Map){}
 	private override init(){}
 
