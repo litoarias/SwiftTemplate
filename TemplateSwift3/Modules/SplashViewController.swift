@@ -25,6 +25,7 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
         networkService.request(router: DemoRouter.postsA()) { (result) in
             
             switch result {
+                
             case .success(.array (let response)):
                 if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: response){
                     debugPrint("--> \(resp)")
@@ -35,7 +36,10 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
                     debugPrint("----> \(resp)")
                 }
                 
-            case .error:
+            case .error(let error, let data):
+                debugPrint(error)
+                debugPrint(data)
+                
                 break
                 
             }

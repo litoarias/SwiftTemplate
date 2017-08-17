@@ -14,4 +14,11 @@ target 'TemplateSwift3' do
     pod 'Localize-Swift', '~> 1.6'
     pod 'Unbox'
     
+    
+    target 'TemplateSwift3Tests' do
+        inherit! :search_paths
+        pod 'Quick'
+        pod 'Nimble'
+        pod 'Mockingjay'
+    end
 end

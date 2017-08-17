@@ -10,9 +10,12 @@ import Alamofire
 
 protocol NetworkRequest {
     
-    func request(
-        router: URLRequestConvertible,
-        completion: @escaping (Result<Json>) -> Void) -> Void
+    func request(router: URLRequestConvertible,
+                 completion: @escaping (Result<Json>) -> Void) -> Void
+    
+    func request(router: URLRequestConvertible,
+                 adapter: RequestAdapter?,
+                 completion: @escaping (Result<Json>) -> Void) -> Void
     
     func request(
         _ url: URL,

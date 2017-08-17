@@ -6,7 +6,9 @@
 //  Copyright © 2017 Hipolito Arias. All rights reserved.
 //
 
+import Foundation
+
 enum Result<T> {
     case success(T)
-    case error
+    case error(NSError, Data)
 }

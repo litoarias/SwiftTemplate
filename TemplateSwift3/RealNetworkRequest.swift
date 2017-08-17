@@ -11,33 +11,41 @@ import Alamofire
 class RealNetworkRequest: NetworkRequest {
     
     var sessionManager = NetworkSessionManager.shared.sessionManager
+    var jsonParser = ResponseJsonParser()
+    
+    //    var sessionManager: NetworkSessionManager
+    //    var jsonParser: ResponseJsonParser
+    //    init(sessionManager: NetworkSessionManager, jsonParser: ResponseJsonParser) {
+    //        self.sessionManager = sessionManager
+    //        self.jsonParser = jsonParser
+    //    }    
     
     func request(router: URLRequestConvertible, completion: @escaping (Result<Json>) -> Void) {
+        self.request(router: router, adapter: nil, completion: completion)
+    }
+    
+    func request(router: URLRequestConvertible, adapter: RequestAdapter?, completion: @escaping (Result<Json>) -> Void) {
         
-        sessionManager.request(router).responseJSON(completionHandler: { (response) in
-            if let value = response.result.value, let result = Json(json: value) {
-                completion(.success(result))
-            } else {
-                completion(.error)
-            }
-        })
+        sessionManager.adapter = adapter
+        sessionManager
+            .request(router)
+            .validate(statusCode: 200..<300)
+            .responseJSON(completionHandler: { [weak self] (response) in
+                self?.jsonParser.parseResponseServer(response: response, completion: completion)
+            })
     }
     
     func request(_ url: URL, method: HTTPMethod, parameters: [String : Any]?, headers: [String : String]?, completion: @escaping (Result<Json>) -> Void) {
         
-        sessionManager.request(url,
-                               method: method,
-                               parameters: parameters,
-                               encoding: URLEncoding.default,
-                               headers: headers).responseJSON(completionHandler: { (response) in
-                               
-                                if let value = response.result.value, let result = Json(json: value) {
-                                    completion(.success(result))
-                                } else {
-                                    completion(.error)
-                                }
-                               
-                               })
+        sessionManager
+            .request(url,
+                     method: method,
+                     parameters: parameters,
+                     encoding: URLEncoding.default,
+                     headers: headers)
+            .responseJSON(completionHandler: { [weak self] (response) in
+                self?.jsonParser.parseResponseServer(response: response, completion: completion)
+            })
     }
     
 }
