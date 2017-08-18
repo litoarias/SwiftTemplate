@@ -8,17 +8,13 @@
 
 import Alamofire
 
-class RealNetworkRequest: NetworkRequest {
+class RealNetworkRequest: NetworkRequest, JsonParser {
     
-    var sessionManager = NetworkSessionManager.shared.sessionManager
-    var jsonParser = ResponseJsonParser()
+    var sessionManager: NetworkSessionManager
     
-    //    var sessionManager: NetworkSessionManager
-    //    var jsonParser: ResponseJsonParser
-    //    init(sessionManager: NetworkSessionManager, jsonParser: ResponseJsonParser) {
-    //        self.sessionManager = sessionManager
-    //        self.jsonParser = jsonParser
-    //    }    
+    init(sessionManager: NetworkSessionManager) {
+        self.sessionManager = sessionManager
+    }
     
     func request(router: URLRequestConvertible, completion: @escaping (Result<Json>) -> Void) {
         self.request(router: router, adapter: nil, completion: completion)
@@ -27,24 +23,24 @@ class RealNetworkRequest: NetworkRequest {
     func request(router: URLRequestConvertible, adapter: RequestAdapter?, completion: @escaping (Result<Json>) -> Void) {
         
         sessionManager.adapter = adapter
-        sessionManager
+        sessionManager.sessionManager
             .request(router)
             .validate(statusCode: 200..<300)
             .responseJSON(completionHandler: { [weak self] (response) in
-                self?.jsonParser.parseResponseServer(response: response, completion: completion)
+                self?.parseResponseServer(response: response, completion: completion)
             })
     }
     
     func request(_ url: URL, method: HTTPMethod, parameters: [String : Any]?, headers: [String : String]?, completion: @escaping (Result<Json>) -> Void) {
         
-        sessionManager
+        sessionManager.sessionManager
             .request(url,
                      method: method,
                      parameters: parameters,
                      encoding: URLEncoding.default,
                      headers: headers)
             .responseJSON(completionHandler: { [weak self] (response) in
-                self?.jsonParser.parseResponseServer(response: response, completion: completion)
+                self?.parseResponseServer(response: response, completion: completion)
             })
     }
     

@@ -51,7 +51,6 @@
 		0AA208461F17804000315FDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA208481F17804000315FDC /* Localizable.strings */; };
 		0AA77DC91F30ABF10048ACB1 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA77DC81F30ABF10048ACB1 /* NSError.swift */; };
 		0AB6484F1F45B18C00FA8D4F /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB6484E1F45B18C00FA8D4F /* JsonParser.swift */; };
-		0AB648511F45B3A300FA8D4F /* ResponseJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB648501F45B3A300FA8D4F /* ResponseJsonParser.swift */; };
 		0AB648591F45B83C00FA8D4F /* TemplateSwift3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB648581F45B83C00FA8D4F /* TemplateSwift3Tests.swift */; };
 		0AB648611F45BFA500FA8D4F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB648601F45BFA500FA8D4F /* UIImageView.swift */; };
 		0AC73D281F17D1E600D7C808 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC73D271F17D1E600D7C808 /* SessionManager.swift */; };
@@ -120,7 +119,6 @@
 		0AA208491F17804200315FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0AA77DC81F30ABF10048ACB1 /* NSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
 		0AB6484E1F45B18C00FA8D4F /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
-		0AB648501F45B3A300FA8D4F /* ResponseJsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseJsonParser.swift; sourceTree = "<group>"; };
 		0AB648561F45B83C00FA8D4F /* TemplateSwift3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateSwift3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB648581F45B83C00FA8D4F /* TemplateSwift3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSwift3Tests.swift; sourceTree = "<group>"; };
 		0AB6485A1F45B83C00FA8D4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 				0A22F2051F45790000628E70 /* Result.swift */,
 				0A22F2071F45795100628E70 /* JsonObject.swift */,
 				0AB6484E1F45B18C00FA8D4F /* JsonParser.swift */,
-				0AB648501F45B3A300FA8D4F /* ResponseJsonParser.swift */,
 				0A22F2091F4579A400628E70 /* NetworkRequest.swift */,
 				0A22F20B1F4579EC00628E70 /* RealNetworkRequest.swift */,
 				0AC73D271F17D1E600D7C808 /* SessionManager.swift */,
@@ -636,9 +633,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TemplateSwift3Tests/Pods-TemplateSwift3Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mockingjay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URITemplate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -651,13 +657,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TemplateSwift3-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		74164A656784B9FD4F64E9A8 /* [CP] Check Pods Manifest.lock */ = {
@@ -666,13 +675,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TemplateSwift3Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		83C702E563BBB7D693DC63E4 /* [CP] Embed Pods Frameworks */ = {
@@ -681,9 +693,26 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TemplateSwift3/Pods-TemplateSwift3-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/NextResponderTextField/NextResponderTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NextResponderTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -759,7 +788,6 @@
 				413D24071F32357200AA7A65 /* DemoProvider.swift in Sources */,
 				0A22F2061F45790000628E70 /* Result.swift in Sources */,
 				0AA2080A1F176EC500315FDC /* UITableView.swift in Sources */,
-				0AB648511F45B3A300FA8D4F /* ResponseJsonParser.swift in Sources */,
 				0AA208371F17780800315FDC /* SessionHelper.swift in Sources */,
 				0A3900FF1F178FD200C4594E /* BaseContract.swift in Sources */,
 				0AA2080C1F176EE400315FDC /* NibLoadableView.swift in Sources */,
