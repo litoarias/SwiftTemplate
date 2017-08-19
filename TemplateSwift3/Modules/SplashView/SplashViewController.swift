@@ -6,7 +6,6 @@
 //  Copyright © 2017 Hipolito Arias. All rights reserved.
 //
 
-import UIKit
 import ObjectMapper
 
 class SplashViewController: BaseViewController, StoryboardLoadable {
@@ -20,7 +19,6 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         networkService.request(router: DemoRouter.postsA()) { (result) in
             
@@ -36,16 +34,15 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
                     debugPrint("----> \(resp)")
                 }
                 
-            case .error(let error, let data):
-                debugPrint(error)
-                debugPrint(data)
                 
-                break
+            case .error(.basicError (let error)):
+                debugPrint(error)
+                
+            case .error(.timeoutError (let error)), .error(.noInternet (let error)):
+                debugPrint(error)
+                
                 
             }
-            
-            
-            
         }
     }
 }

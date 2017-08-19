@@ -16,11 +16,11 @@ class RealNetworkRequest: NetworkRequest, JsonParser {
         self.sessionManager = sessionManager
     }
     
-    func request(router: URLRequestConvertible, completion: @escaping (Result<Json>) -> Void) {
+    func request(router: URLRequestConvertible, completion: @escaping (Result<Json, NetworkError>) -> Void) {
         self.request(router: router, adapter: nil, completion: completion)
     }
     
-    func request(router: URLRequestConvertible, adapter: RequestAdapter?, completion: @escaping (Result<Json>) -> Void) {
+    func request(router: URLRequestConvertible, adapter: RequestAdapter?, completion: @escaping (Result<Json, NetworkError>) -> Void) {
         
         sessionManager.adapter = adapter
         sessionManager.sessionManager
@@ -31,7 +31,7 @@ class RealNetworkRequest: NetworkRequest, JsonParser {
             })
     }
     
-    func request(_ url: URL, method: HTTPMethod, parameters: [String : Any]?, headers: [String : String]?, completion: @escaping (Result<Json>) -> Void) {
+    func request(_ url: URL, method: HTTPMethod, parameters: [String : Any]?, headers: [String : String]?, completion: @escaping (Result<Json, NetworkError>) -> Void) {
         
         sessionManager.sessionManager
             .request(url,

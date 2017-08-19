@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Result<T> {
+enum Result<T, V> {
     case success(T)
-    case error(NSError, Data)
+    case error(V)
 }
