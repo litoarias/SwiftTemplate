@@ -10,6 +10,7 @@ import Foundation
 
 /// `NetworkError` is the encapsulation Error used in this network layer
 ///
+/// `ErrorObject` Typealias for set name, the type data what return it's a tuple of two values
 ///  In this exapmple case using three possible cases, you can add more required cases
 /// - timeoutError:   Returned when the connection time expired
 /// - noInternet:     Returned when Internet connection is not available

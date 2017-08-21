@@ -40,7 +40,10 @@ enum DemoRouter: URLRequestConvertible {
     // MARK: URLRequestConvertible
     
     func asURLRequest() throws -> URLRequest {
-        var urlRequest = try makeurlRequest()
+        let url = try Constants.URL.baseURL.asURL()
+        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+        urlRequest.httpMethod = method.rawValue
+        
         switch self {
         case .postsC(let parameters):
             urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
@@ -51,10 +54,4 @@ enum DemoRouter: URLRequestConvertible {
         return urlRequest
     }
     
-    func makeurlRequest() throws -> URLRequest {
-        let url = try Constants.URL.baseURL.asURL()
-        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
-        urlRequest.httpMethod = method.rawValue
-        return urlRequest
-    }
 }
