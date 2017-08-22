@@ -17,8 +17,6 @@ target 'TemplateSwift3' do
     
     target 'TemplateSwift3Tests' do
         inherit! :search_paths
-        pod 'Quick'
-        pod 'Nimble'
-        pod 'Mockingjay'
+        pod 'OHHTTPStubs/Swift'
     end
 end

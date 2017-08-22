@@ -16,16 +16,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0AB648551F45B83C00FA8D4F"
-               BuildableName = "TemplateSwift3Tests.xctest"
-               BlueprintName = "TemplateSwift3Tests"
-               ReferencedContainer = "container:TemplateSwift3.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "0AC637DB1F4C470C00D04D91"
                BuildableName = "TemplateSwift3UITests.xctest"
                BlueprintName = "TemplateSwift3UITests"
