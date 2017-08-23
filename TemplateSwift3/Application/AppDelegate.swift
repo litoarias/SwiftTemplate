@@ -53,6 +53,7 @@ extension AppDelegate {
     
     func presentInitialScreen() {
         let rootRouter = RootRouter()
+        window = UIWindow(frame: UIScreen.main.bounds)
         rootRouter.presentFirstScreen(inWindow: window!)
     }
 

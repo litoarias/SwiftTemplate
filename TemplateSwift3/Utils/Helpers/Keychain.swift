@@ -47,16 +47,6 @@ enum KeychainCore {
         }
     }
     
-    static func setFirebaseToken(token: String) {
-        do {
-            try keychain.set(token, key: Constants.Keychain.firebaseToken)
-            
-            print("--->>> \(KeychainCore.getFirebaseToken()) <<<----")
-        }
-        catch let error {
-            print("setUserToken Keychain error save: \(error)")
-        }
-    }
     
     // MARK: Getters
     
@@ -78,14 +68,6 @@ enum KeychainCore {
     
     static func getToken() -> String {
         let token = keychain[string: Constants.Keychain.token]
-        guard token != nil else {
-            return ""
-        }
-        return token!
-    }
-    
-    static func getFirebaseToken() -> String {
-        let token = keychain[string: Constants.Keychain.firebaseToken]
         guard token != nil else {
             return ""
         }
