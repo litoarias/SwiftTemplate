@@ -14,7 +14,7 @@ enum Constants {
     
     enum URL {
         static let baseURL = "https://jsonplaceholder.typicode.com/"
-        static let posts_verbGet = "posts"
+        static let posts_verbGet = "padsfadsosts"
         static let posts_verbPost = "posts"
         static let posts_verbGetWithParams = "posts"
     }

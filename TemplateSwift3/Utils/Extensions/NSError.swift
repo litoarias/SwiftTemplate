@@ -28,8 +28,8 @@ extension NSError {
     
     static func basic(_ error: Error, body: Data?) -> NSError {
         // If you want getting body of respons for custom server errors, using this method
-        if let data = body {
-            if let stringJson = data.getBodyData(), let entityError = EntityError.mapping(body: stringJson) {
+        if let data = body, let stringJson = data.getBodyData()  {
+            if !(stringJson.characters.count == 0) && !(stringJson.characters.count == 2), let entityError = EntityError.mapping(body: stringJson) {
                 return NSError(domain:error.domain, code:error.code, userInfo: entityError.toJSON())
             }
         }

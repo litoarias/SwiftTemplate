@@ -19,31 +19,29 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        networkService.request(router: DemoRouter.postsA()) { (result) in
-//            
-//            switch result {
-//                
-//            case .success(.array (let response)):
-//                if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: response){
-//                    debugPrint("--> \(resp)")
-//                }
-//                
-//            case .success(.object (let response)):
-//                if let resp = Mapper<PostDemoModel>().map(JSON: response) {
-//                    debugPrint("----> \(resp)")
-//                }
-//                
-//                
-//            case .error(.basicError (let error)):
-//                debugPrint(error)
-//                
-//            case .error(.timeoutError (let error)), .error(.noInternet (let error)):
-//                debugPrint(error)
-//                
-//                
-//            }
-//        }
+        
+        networkService.request(router: DemoRouter.postsA()) { (result) in
+            
+            switch result {
+                
+            case .success(.array (let response)):
+                if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: response){
+                    debugPrint("--> \(resp)")
+                }
+                
+            case .success(.object (let response)):
+                if let resp = Mapper<PostDemoModel>().map(JSON: response) {
+                    debugPrint("----> \(resp)")
+                }
+                
+                
+            case .error(.basicError (let error)):
+                debugPrint(error)
+                print(error.0.userInfo["description"] ?? "No description")
+                print(error.0.userInfo["message"] ?? "No message")
+         
+            }
+        }
     }
 }
 

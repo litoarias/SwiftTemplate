@@ -20,24 +20,24 @@ typealias ErrorObject = (NSError, Data?)
 
 enum NetworkError {
     
-    case timeoutError(_: ErrorObject)
-    case noInternet(_: ErrorObject)
+//    case timeoutError(_: ErrorObject)
+//    case noInternet(_: ErrorObject)
     case basicError(_: ErrorObject)
     
     init?(error: NSError, data: Data) {
         
-        if error._code == NSURLErrorTimedOut {
-            let errorObject: ErrorObject = (NSError.timeout(), data)
-            self = .timeoutError(errorObject)
-            return
-        }
-        
-        if error._code == NSURLErrorNotConnectedToInternet {            
-            let errorObject: ErrorObject = (NSError.internet(), data)
-            self = .noInternet(errorObject)
-            return
-        }
-        
+//        if error._code == NSURLErrorTimedOut {
+//            let errorObject: ErrorObject = (NSError.timeout(), data)
+//            self = .timeoutError(errorObject)
+//            return
+//        }
+//        
+//        if error._code == NSURLErrorNotConnectedToInternet {            
+//            let errorObject: ErrorObject = (NSError.internet(), data)
+//            self = .noInternet(errorObject)
+//            return
+//        }
+//        
         let errorObject: ErrorObject = (NSError.basic(error, body: data), data)
         self = .basicError(errorObject)
         
