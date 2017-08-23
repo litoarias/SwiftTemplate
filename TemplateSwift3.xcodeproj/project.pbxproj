@@ -1149,6 +1149,7 @@
 				0AC637E41F4C470C00D04D91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
