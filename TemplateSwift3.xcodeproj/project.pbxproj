@@ -182,10 +182,9 @@
 		0A22F2041F4578DC00628E70 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				0AB5E0481F4EE60B008C514D /* HANetwork */,
 				0A22F20D1F4580AB00628E70 /* DemoAdapter.swift */,
-				416998351F48973F00F25519 /* Protocols */,
-				416998341F48973300F25519 /* Enums */,
+				413D24011F322F0C00AA7A65 /* Router.swift */,
+				0AB5E0481F4EE60B008C514D /* HANetwork */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -502,21 +501,6 @@
 				413D24041F32329D00AA7A65 /* PostDemoModel.swift */,
 			);
 			path = NetworkModels;
-			sourceTree = "<group>";
-		};
-		416998341F48973300F25519 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				413D24011F322F0C00AA7A65 /* Router.swift */,
-			);
-			name = Enums;
-			sourceTree = "<group>";
-		};
-		416998351F48973F00F25519 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Protocols;
 			sourceTree = "<group>";
 		};
 		9B9BAF168471F56B4EC6D601 /* Pods */ = {
