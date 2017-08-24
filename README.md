@@ -21,7 +21,7 @@ Basic steps:
  3. Run pod install on the project folder to download all dependencies with Cocoapods
  4. Open ${Project_Name}.xcworkspace
  5. Analyse the project structure and start coding!
- 6. Add custom requests with [HANetwork is Alamofire wrapper](https://github.com/litoarias/HANetwork), this wrapper it's included in the project from Submodules, when you clone the repo use `recursive mode`
+ 6. Add your custom requests with [HANetwork](https://github.com/litoarias/HANetwork), this is a wrapper of Alamofire it's included in the project from Submodules, when you clone the repo use `recursive mode`
 
 **Design pattern**
 
