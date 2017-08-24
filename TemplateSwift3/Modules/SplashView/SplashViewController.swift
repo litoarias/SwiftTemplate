@@ -20,7 +20,7 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkService.request(router: DemoRouter.postsA()) { (result) in
+        networkService.request(router: DemoRouter.postsA(), adapter: DemoAdapter()) { (result) in
             
             switch result {
                 

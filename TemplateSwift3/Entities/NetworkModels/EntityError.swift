@@ -29,4 +29,10 @@ extension EntityError {
         }
         return nil
     }
+    
+    func isNil() -> Bool {
+        if self.message == nil { return true }
+        if self.statusCode == nil { return true }
+        return false
+    }
 }
