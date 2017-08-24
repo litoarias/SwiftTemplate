@@ -7,6 +7,7 @@ It's a basic template for start projects, using VIPER and Clean Architecture
 - [x] EASY TO USE :trollface:
 - [x] Unit test on Network layer using [OHHTTPStubs](https://github.com/AliSoftware/OHHTTPStubs) :wrench:
 - [x] Granularity in the network layer with [HANetwork](https://github.com/litoarias/HANetwork)
+- [x] Add use cases VIPER files with [ViperTemplate](https://github.com/litoarias/ViperTemplate/) 
 
 ## Motivation :bowtie:
 >All of this begins with the tedious process of putting together the skeleton and structure of any project at its inception, and how costly it sometimes is. The purpose is to make trivial the beginning of any development with Swift 3 and using architecture Clean with VIPER.
