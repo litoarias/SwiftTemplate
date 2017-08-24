@@ -1,0 +1,3 @@
+[submodule "TemplateSwift3/NetworkLayer/HANetwork"]
+	path = TemplateSwift3/NetworkLayer/HANetwork
+	url = https://github.com/litoarias/HANetwork
