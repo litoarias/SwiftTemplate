@@ -13,35 +13,43 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
     // MARK: Properties
     
     var presenter: SplashPresentation?
-    var networkService: RealNetworkRequest = RealNetworkRequest(sessionManager: NetworkSessionManager.shared)
+    var network: RealNetworkRequest = RealNetworkRequest(session: NetworkSessionManager.shared)
     
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        call(nil)
         
-        networkService.request(router: DemoRouter.postsA(), adapter: DemoAdapter()) { (result) in
+        
+    }
+    
+    @IBAction func call(_ sender: Any?) {
+        
+        network.request(router: DemoRouter.postsA(), adapter: DemoAdapter()) { (result) in
             
             switch result {
                 
             case .success(.array (let response)):
                 if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: response){
-                    debugPrint("--> \(resp)")
+                    debugPrint("Single: ----> \(resp)")
                 }
+                break
                 
             case .success(.object (let response)):
                 if let resp = Mapper<PostDemoModel>().map(JSON: response) {
-                    debugPrint("----> \(resp)")
+                    debugPrint("Collection: ----> \(resp)")
                 }
+                break
                 
+            case .error(.basic (let error)):
+                debugPrint("Error: \(error)")
+                break
                 
-            case .error(.basicError (let error)):
-                debugPrint(error)
-                print(error.0.userInfo["description"] ?? "No description")
-                print(error.0.userInfo["message"] ?? "No message")
-         
             }
         }
+        
     }
 }
 

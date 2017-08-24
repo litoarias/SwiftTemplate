@@ -26,6 +26,12 @@ extension NSError {
         return NSError(domain:error.domain, code:error.code, userInfo:["description" : error.localizedDescription, "message" : error.message])
     }
     
+    static func noConnection() -> NSError {
+        if let bundleIdentifier =  Bundle.main.bundleIdentifier {
+            return NSError(domain:bundleIdentifier, code:9999, userInfo:[:])
+        }
+        return NSError(domain:"com.bundle.app", code:999, userInfo:[:])
+    }
     
     //    static func parsing() -> NSError {
     //        return NSError(domain:"MYCustomDomain", code:1000, userInfo:["description" : "", "message" : ""])
