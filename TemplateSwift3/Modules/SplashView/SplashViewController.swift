@@ -13,37 +13,43 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
     // MARK: Properties
     
     var presenter: SplashPresentation?
-    var networkService: RealNetworkRequest = RealNetworkRequest(sessionManager: NetworkSessionManager.shared)
+    var network: RealNetworkRequest = RealNetworkRequest(session: NetworkSessionManager.shared)
     
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        networkService.request(router: DemoRouter.postsA()) { (result) in
-//            
-//            switch result {
-//                
-//            case .success(.array (let response)):
-//                if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: response){
-//                    debugPrint("--> \(resp)")
-//                }
-//                
-//            case .success(.object (let response)):
-//                if let resp = Mapper<PostDemoModel>().map(JSON: response) {
-//                    debugPrint("----> \(resp)")
-//                }
-//                
-//                
-//            case .error(.basicError (let error)):
-//                debugPrint(error)
-//                
-//            case .error(.timeoutError (let error)), .error(.noInternet (let error)):
-//                debugPrint(error)
-//                
-//                
-//            }
-//        }
+       
+        call(nil)
+        
+        
+    }
+    
+    @IBAction func call(_ sender: Any?) {
+        
+        network.request(router: DemoRouter.postsA(), adapter: DemoAdapter()) { (result) in
+            
+            switch result {
+                
+            case .success(.array (let response)):
+                if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: response){
+                    debugPrint("Single: ----> \(resp)")
+                }
+                break
+                
+            case .success(.object (let response)):
+                if let resp = Mapper<PostDemoModel>().map(JSON: response) {
+                    debugPrint("Collection: ----> \(resp)")
+                }
+                break
+                
+            case .error(.basic (let error)):
+                debugPrint("Error: \(error)")
+                break
+                
+            }
+        }
+        
     }
 }
 
