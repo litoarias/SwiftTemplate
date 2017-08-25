@@ -33,13 +33,13 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
                 
             case .success(.array (let response)):
                 if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: response){
-                    debugPrint("Single: ----> \(resp)")
+                    debugPrint("Collection: ----> \(resp)")
                 }
                 break
                 
             case .success(.object (let response)):
                 if let resp = Mapper<PostDemoModel>().map(JSON: response) {
-                    debugPrint("Collection: ----> \(resp)")
+                    debugPrint("Single: ----> \(resp)")
                 }
                 break
                 
