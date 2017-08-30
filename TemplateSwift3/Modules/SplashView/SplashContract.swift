@@ -14,14 +14,19 @@ protocol SplashView: BaseView {
 
 protocol SplashPresentation: class {
     // TODO: Declare presentation methods
+    func viewDidLoad()
 }
 
 protocol SplashUseCase: class {
     // TODO: Declare use case methods
+    func getPosts()
 }
 
 protocol SplashInteractorOutput: class {
     // TODO: Declare interactor output methods
+    func objectReceive(_ object: [String : Any])
+    func collectionRecieve(_ collection: [[String : Any]])
+    func errorReceive(_ error: (NSError, Data?))
 }
 
 protocol SplashWireframe: class {

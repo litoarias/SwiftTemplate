@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 class SplashPresenter {
 
@@ -18,9 +19,32 @@ class SplashPresenter {
 }
 
 extension SplashPresenter: SplashPresentation {
+    func viewDidLoad() {
+        interactor?.getPosts()
+    }
+
     // TODO: implement presentation methods
+    
+
 }
 
 extension SplashPresenter: SplashInteractorOutput {
+    
     // TODO: implement interactor output methods
+
+    func objectReceive(_ object: [String : Any]) {
+        if let resp = Mapper<PostDemoModel>().map(JSON: object) {
+            debugPrint("Single: ----> \(resp)")
+        }
+    }
+
+    func collectionRecieve(_ collection: [[String : Any]]) {
+        if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: collection){
+            debugPrint("Collection: ----> \(resp)")
+        }
+    }
+    
+    func errorReceive(_ error: (NSError, Data?)) {
+        
+    }
 }
