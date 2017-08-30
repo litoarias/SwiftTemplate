@@ -13,6 +13,8 @@ class SplashInteractor {
     // MARK: Properties
 
     weak var output: SplashInteractorOutput?
+    var network: Network! = nil
+    
 }
 
 extension SplashInteractor: SplashUseCase {

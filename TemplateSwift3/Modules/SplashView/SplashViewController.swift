@@ -13,7 +13,7 @@ class SplashViewController: BaseViewController, StoryboardLoadable {
     // MARK: Properties
     
     var presenter: SplashPresentation?
-    var network: RealNetworkRequest = RealNetworkRequest(session: NetworkSessionManager.shared)
+    var network: Network = Network(session: NetworkSessionManager.shared)
     
     // MARK: Lifecycle
     

@@ -46,13 +46,13 @@
 		0AA208421F177F1A00315FDC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208411F177F1A00315FDC /* BaseViewController.swift */; };
 		0AA208461F17804000315FDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA208481F17804000315FDC /* Localizable.strings */; };
 		0AA77DC91F30ABF10048ACB1 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA77DC81F30ABF10048ACB1 /* NSError.swift */; };
-		0AB5E0541F4EE60B008C514D /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E04A1F4EE60B008C514D /* JsonObject.swift */; };
-		0AB5E0551F4EE60B008C514D /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E04B1F4EE60B008C514D /* JsonParser.swift */; };
-		0AB5E0571F4EE60B008C514D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E04D1F4EE60B008C514D /* NetworkError.swift */; };
-		0AB5E0581F4EE60B008C514D /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E04E1F4EE60B008C514D /* NetworkRequest.swift */; };
-		0AB5E05A1F4EE60B008C514D /* RealNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E0501F4EE60B008C514D /* RealNetworkRequest.swift */; };
-		0AB5E05B1F4EE60B008C514D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E0511F4EE60B008C514D /* Result.swift */; };
-		0AB5E05C1F4EE60B008C514D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E0521F4EE60B008C514D /* SessionManager.swift */; };
+		0AB5E0541F4EE60B008C514D /* HAJsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E04A1F4EE60B008C514D /* HAJsonObject.swift */; };
+		0AB5E0551F4EE60B008C514D /* HAResponsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E04B1F4EE60B008C514D /* HAResponsable.swift */; };
+		0AB5E0571F4EE60B008C514D /* HAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E04D1F4EE60B008C514D /* HAError.swift */; };
+		0AB5E0581F4EE60B008C514D /* HARequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E04E1F4EE60B008C514D /* HARequestable.swift */; };
+		0AB5E05A1F4EE60B008C514D /* HANetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E0501F4EE60B008C514D /* HANetwork.swift */; };
+		0AB5E05B1F4EE60B008C514D /* HAResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E0511F4EE60B008C514D /* HAResult.swift */; };
+		0AB5E05C1F4EE60B008C514D /* HANetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5E0521F4EE60B008C514D /* HANetworkSession.swift */; };
 		0AB648591F45B83C00FA8D4F /* TemplateSwift3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB648581F45B83C00FA8D4F /* TemplateSwift3Tests.swift */; };
 		0AB648611F45BFA500FA8D4F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB648601F45BFA500FA8D4F /* UIImageView.swift */; };
 		0AC637DF1F4C470C00D04D91 /* TemplateSwift3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC637DE1F4C470C00D04D91 /* TemplateSwift3UITests.swift */; };
@@ -125,13 +125,13 @@
 		0AA208471F17804000315FDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0AA208491F17804200315FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0AA77DC81F30ABF10048ACB1 /* NSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
-		0AB5E04A1F4EE60B008C514D /* JsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
-		0AB5E04B1F4EE60B008C514D /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
-		0AB5E04D1F4EE60B008C514D /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		0AB5E04E1F4EE60B008C514D /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		0AB5E0501F4EE60B008C514D /* RealNetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealNetworkRequest.swift; sourceTree = "<group>"; };
-		0AB5E0511F4EE60B008C514D /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		0AB5E0521F4EE60B008C514D /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		0AB5E04A1F4EE60B008C514D /* HAJsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HAJsonObject.swift; sourceTree = "<group>"; };
+		0AB5E04B1F4EE60B008C514D /* HAResponsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HAResponsable.swift; sourceTree = "<group>"; };
+		0AB5E04D1F4EE60B008C514D /* HAError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HAError.swift; sourceTree = "<group>"; };
+		0AB5E04E1F4EE60B008C514D /* HARequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HARequestable.swift; sourceTree = "<group>"; };
+		0AB5E0501F4EE60B008C514D /* HANetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HANetwork.swift; sourceTree = "<group>"; };
+		0AB5E0511F4EE60B008C514D /* HAResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HAResult.swift; sourceTree = "<group>"; };
+		0AB5E0521F4EE60B008C514D /* HANetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HANetworkSession.swift; sourceTree = "<group>"; };
 		0AB648561F45B83C00FA8D4F /* TemplateSwift3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateSwift3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB648581F45B83C00FA8D4F /* TemplateSwift3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSwift3Tests.swift; sourceTree = "<group>"; };
 		0AB6485A1F45B83C00FA8D4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -464,13 +464,13 @@
 		0AB5E0481F4EE60B008C514D /* HANetwork */ = {
 			isa = PBXGroup;
 			children = (
-				0AB5E04A1F4EE60B008C514D /* JsonObject.swift */,
-				0AB5E04B1F4EE60B008C514D /* JsonParser.swift */,
-				0AB5E04D1F4EE60B008C514D /* NetworkError.swift */,
-				0AB5E04E1F4EE60B008C514D /* NetworkRequest.swift */,
-				0AB5E0501F4EE60B008C514D /* RealNetworkRequest.swift */,
-				0AB5E0511F4EE60B008C514D /* Result.swift */,
-				0AB5E0521F4EE60B008C514D /* SessionManager.swift */,
+				0AB5E04A1F4EE60B008C514D /* HAJsonObject.swift */,
+				0AB5E04B1F4EE60B008C514D /* HAResponsable.swift */,
+				0AB5E04D1F4EE60B008C514D /* HAError.swift */,
+				0AB5E04E1F4EE60B008C514D /* HARequestable.swift */,
+				0AB5E0501F4EE60B008C514D /* HANetwork.swift */,
+				0AB5E0511F4EE60B008C514D /* HAResult.swift */,
+				0AB5E0521F4EE60B008C514D /* HANetworkSession.swift */,
 			);
 			path = HANetwork;
 			sourceTree = "<group>";
@@ -680,7 +680,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5A6E886840521F34C1D87699 /* [CP] Copy Pods Resources */ = {
@@ -731,7 +731,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		913DE96B06401246E9DFDCBC /* [CP] Embed Pods Frameworks */ = {
@@ -803,8 +803,8 @@
 				413D24051F32329D00AA7A65 /* PostDemoModel.swift in Sources */,
 				0AA207F91F17667F00315FDC /* ValidationHelper.swift in Sources */,
 				0A9508F71F1792C100581CE8 /* SplashPresenter.swift in Sources */,
-				0AB5E0571F4EE60B008C514D /* NetworkError.swift in Sources */,
-				0AB5E0551F4EE60B008C514D /* JsonParser.swift in Sources */,
+				0AB5E0571F4EE60B008C514D /* HAError.swift in Sources */,
+				0AB5E0551F4EE60B008C514D /* HAResponsable.swift in Sources */,
 				413D24021F322F0C00AA7A65 /* Router.swift in Sources */,
 				0AA208001F17685400315FDC /* ReusableView.swift in Sources */,
 				0A9508F81F1792C100581CE8 /* SplashRouter.swift in Sources */,
@@ -818,20 +818,20 @@
 				0A39011F1F17918A00C4594E /* UIStoryboard.swift in Sources */,
 				0AA208221F1772B700315FDC /* InverterButton.swift in Sources */,
 				0AA207FB1F17677900315FDC /* UIAlertController.swift in Sources */,
-				0AB5E0541F4EE60B008C514D /* JsonObject.swift in Sources */,
+				0AB5E0541F4EE60B008C514D /* HAJsonObject.swift in Sources */,
 				0AA2080A1F176EC500315FDC /* UITableView.swift in Sources */,
-				0AB5E05C1F4EE60B008C514D /* SessionManager.swift in Sources */,
+				0AB5E05C1F4EE60B008C514D /* HANetworkSession.swift in Sources */,
 				0AA208371F17780800315FDC /* Keychain.swift in Sources */,
 				0A3900FF1F178FD200C4594E /* BaseContract.swift in Sources */,
 				0AA2080C1F176EE400315FDC /* NibLoadableView.swift in Sources */,
 				0AA207FD1F17681600315FDC /* UIViewController.swift in Sources */,
-				0AB5E05B1F4EE60B008C514D /* Result.swift in Sources */,
+				0AB5E05B1F4EE60B008C514D /* HAResult.swift in Sources */,
 				0AA208041F176DF000315FDC /* Error.swift in Sources */,
 				416998311F4889D100F25519 /* Data.swift in Sources */,
 				0AA2081F1F17721F00315FDC /* UIView.swift in Sources */,
-				0AB5E0581F4EE60B008C514D /* NetworkRequest.swift in Sources */,
+				0AB5E0581F4EE60B008C514D /* HARequestable.swift in Sources */,
 				0AA207BA1F175BC100315FDC /* AppDelegate.swift in Sources */,
-				0AB5E05A1F4EE60B008C514D /* RealNetworkRequest.swift in Sources */,
+				0AB5E05A1F4EE60B008C514D /* HANetwork.swift in Sources */,
 				0A9508F91F1792C100581CE8 /* SplashViewController.swift in Sources */,
 				0AA77DC91F30ABF10048ACB1 /* NSError.swift in Sources */,
 			);
