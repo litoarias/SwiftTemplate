@@ -22,7 +22,10 @@ class SplashRouter {
         let presenter = SplashPresenter()
         let router = SplashRouter()
         let interactor = SplashInteractor()
-
+        
+        let network: Network = Network(session: NetworkSessionManager.shared)
+        interactor.network = network
+        
         viewController.presenter =  presenter
 
         presenter.view = viewController
