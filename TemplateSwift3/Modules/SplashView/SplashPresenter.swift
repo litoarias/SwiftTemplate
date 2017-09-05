@@ -33,18 +33,14 @@ extension SplashPresenter: SplashInteractorOutput {
     // TODO: implement interactor output methods
 
     func objectReceive(_ object: [String : Any]) {
-        if let resp = Mapper<PostDemoModel>().map(JSON: object) {
-            debugPrint("Single: ----> \(resp)")
-        }
+        // Use presenter for map data to View Models for show data
     }
 
     func collectionRecieve(_ collection: [[String : Any]]) {
-        if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: collection){
-            debugPrint("Collection: ----> \(resp)")
-        }
+        // Use presenter for map data to View Models for show data
     }
     
     func errorReceive(_ error: (NSError, Data?)) {
-        
+        // Comunicate view a error
     }
 }
