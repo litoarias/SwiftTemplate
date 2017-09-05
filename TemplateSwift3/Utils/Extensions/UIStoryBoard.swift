@@ -10,7 +10,7 @@ import UIKit
 
 extension UIStoryboard {
     
-    func instantiateViewController<T: UIViewController>() -> T where T: ReusableView {
+    func instantiateViewController<T: UIViewController>() -> T {
         return instantiateViewController(withIdentifier: T.reuseIdentifier) as! T
     }
     
