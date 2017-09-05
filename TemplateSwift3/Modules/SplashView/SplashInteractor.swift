@@ -27,7 +27,7 @@ extension SplashInteractor: SplashUseCase {
                 
             case .success(.array (let response)):
                 self?.output?.collectionRecieve(response)
-                // Manage objects to Local Storage
+                // Manage objects to Local Storage or similar task
                 if let resp = Mapper<PostDemoModel>().mapArray(JSONArray: response){
                     debugPrint("Collection: ----> \(resp)")
                 }
@@ -35,7 +35,7 @@ extension SplashInteractor: SplashUseCase {
                 
             case .success(.object (let response)):
                 self?.output?.objectReceive(response)
-                // Manage objects to Local Storage
+                // Manage objects to Local Storage or similar task
                 if let resp = Mapper<PostDemoModel>().map(JSON: response) {
                     debugPrint("Single: ----> \(resp)")
                 }
