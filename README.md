@@ -10,7 +10,7 @@ It's a basic template for start projects, using VIPER and Clean Architecture
 - [x] Add use cases VIPER files with [ViperTemplate](https://github.com/litoarias/ViperTemplate/) 
 
 ## Motivation :bowtie:
->All of this begins with the tedious process of putting together the skeleton and structure of any project at its inception, and how costly it sometimes is. The purpose is to make trivial the beginning of any development with Swift 3 and using architecture Clean with VIPER.
+>All of this begins with the tedious process of putting together the skeleton and structure of any project at its inception, and how costly it sometimes is. The purpose is to make trivial the beginning of any development with Swift 3 (use release Swift 3) or 4 and using architecture Clean with VIPER.
 
 ## Installation 
 iOS SwiftTemplate with Xcode organized with VIPER structure plus useful Extensions and Utils.
