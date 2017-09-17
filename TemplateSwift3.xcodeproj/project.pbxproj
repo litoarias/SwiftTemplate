@@ -464,12 +464,12 @@
 		0AB5E0481F4EE60B008C514D /* HANetwork */ = {
 			isa = PBXGroup;
 			children = (
+				0AB5E0511F4EE60B008C514D /* HAResult.swift */,
 				0AB5E04A1F4EE60B008C514D /* HAJsonObject.swift */,
-				0AB5E04B1F4EE60B008C514D /* HAResponsable.swift */,
 				0AB5E04D1F4EE60B008C514D /* HAError.swift */,
+				0AB5E04B1F4EE60B008C514D /* HAResponsable.swift */,
 				0AB5E04E1F4EE60B008C514D /* HARequestable.swift */,
 				0AB5E0501F4EE60B008C514D /* HANetwork.swift */,
-				0AB5E0511F4EE60B008C514D /* HAResult.swift */,
 				0AB5E0521F4EE60B008C514D /* HANetworkSession.swift */,
 			);
 			path = HANetwork;

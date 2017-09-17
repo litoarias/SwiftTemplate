@@ -23,6 +23,7 @@ extension SplashInteractor: SplashUseCase {
     
     func getPosts() {
         network.request(router: DemoRouter.postsA(), adapter: DemoAdapter()) { [weak self] (result) in
+           
             switch result {
                 
             case .success(.array (let response)):
